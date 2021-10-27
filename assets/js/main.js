@@ -16,12 +16,13 @@ L'alert non si chiude in automatico. Dovete chiuderla voi a mano cliccando su ok
 
 placeToPrintNumber = document.querySelector('.num')
 let number;
-
+let numberUser;
 
 generaNumber()
 console.log(number);
 setTimeout(clearPage, 4000)
 
+setTimeout(asknumberUser, 4000)
 
 
 function generaNumber() {
@@ -38,7 +39,15 @@ function clearPage() {
     placeToPrintNumber.innerHTML = ''
 }
 
-
+function asknumberUser() {
+    numberUser = []
+    for (let index = 0; index < 5; index++) {
+        numUser = parseInt(prompt('write a number'))
+        placeToPrintNumber.innerHTML += numUser + ' '
+        numberUser.push(numUser)
+    }
+    return numberUser
+}
 
 
 
