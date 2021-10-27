@@ -22,10 +22,12 @@ generaNumber()
 console.log(number);
 setTimeout(clearPage, 4000)
 
-setTimeout(asknumberUser, 4000)
+setTimeout(asknumberUser, 5000)
 
 
 function generaNumber() {
+    sec = setInterval(countDown, 1000);
+    seconds = 30
     number = []
     for (let index = 0; index < 5; index++) {
         num = Math.floor(Math.random() * 100)
@@ -45,10 +47,24 @@ function asknumberUser() {
         numUser = parseInt(prompt('write a number'))
         placeToPrintNumber.innerHTML += numUser + ' '
         numberUser.push(numUser)
+        console.log(numberUser.length);
+        if (numberUser.length == 5) {
+            console.log('ferma');
+            clearInterval(sec)
+        }
     }
     return numberUser
 }
 
 
 
-//scorrere tra gli indici dell'array e
+
+
+function countDown() {
+    seconds--;
+    document.querySelector('.timer').innerHTML = seconds + 's'
+    if (seconds == 0) {
+        console.log('tempo scaduto fermati');
+        clearInterval(sec)
+    }
+}
