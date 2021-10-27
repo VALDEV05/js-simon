@@ -12,7 +12,26 @@ L'alert non si chiude in automatico. Dovete chiuderla voi a mano cliccando su ok
  */
 
 
-/* Un alert() espone 5 numeri generati casualmente. */
+/* 
+    Un alert() espone 5 numeri generati casualmente 
+    da li devo far partire un timer di 30 secondi di 'attesa'
+    passati i 30 secondi devo chiedere all'utente di inserire 5 numeri.
+*/
+
+
+
+// STEP 1
+/* crea un alert che mi mostra i 5 numeri */
+
+
+// STEP 2
+/* faccio partire un timer di 30 secondi */
+
+// STEP 3 
+/* passati questi secondi chiedo all'utente i numeri da inserire */
+
+
+
 
 /* placeToPrintNumber = document.querySelector('.num')
 let number;
