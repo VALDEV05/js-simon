@@ -13,3 +13,33 @@ L'alert non si chiude in automatico. Dovete chiuderla voi a mano cliccando su ok
 
 
 /* Un alert() espone 5 numeri generati casualmente. */
+
+placeToPrintNumber = document.querySelector('.num')
+let number;
+
+
+generaNumber()
+console.log(number);
+setTimeout(clearPage, 4000)
+
+
+
+function generaNumber() {
+    number = []
+    for (let index = 0; index < 5; index++) {
+        num = Math.floor(Math.random() * 100)
+        placeToPrintNumber.innerHTML += num + ' '
+        number.push(num)
+    }
+    return number
+}
+
+function clearPage() {
+    placeToPrintNumber.innerHTML = ''
+}
+
+
+
+
+
+//scorrere tra gli indici dell'array e
