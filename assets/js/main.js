@@ -22,14 +22,25 @@ L'alert non si chiude in automatico. Dovete chiuderla voi a mano cliccando su ok
 
 // STEP 1
 /* crea un alert che mi mostra i 5 numeri */
+alert('Memorizza questi numeri' + ' ' + generateRandomNumbers());
 
+function generateRandomNumbers() {
+    //creo un array vuoto in cui inserire i numeri
+    numberRandomArray = []
+        //creo un ciclo in modo da creare 5 numeri
+    for (let index = 0; index < 5; index++) {
+        //creo un numero randomico da 0 a 99
+        numRandom = Math.floor(Math.random() * 100)
+        numberRandomArray.push(numRandom)
+    }
+    return numberRandomArray
+}
 
 // STEP 2
 /* faccio partire un timer di 30 secondi */
 
 // STEP 3 
 /* passati questi secondi chiedo all'utente i numeri da inserire */
-
 
 
 
