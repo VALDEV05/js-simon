@@ -14,7 +14,7 @@ L'alert non si chiude in automatico. Dovete chiuderla voi a mano cliccando su ok
 
 /* Un alert() espone 5 numeri generati casualmente. */
 
-placeToPrintNumber = document.querySelector('.num')
+/* placeToPrintNumber = document.querySelector('.num')
 let number;
 let numberUser;
 
@@ -65,4 +65,4 @@ function countDown() {
         console.log('tempo scaduto fermati');
         clearInterval(sec)
     }
-}
+} */
