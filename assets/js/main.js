@@ -26,6 +26,7 @@ setTimeout(asknumberUser, 5000)
 
 
 function generaNumber() {
+    //faccio partire il cronometro
     sec = setInterval(countDown, 1000);
     seconds = 30
     number = []
@@ -47,11 +48,6 @@ function asknumberUser() {
         numUser = parseInt(prompt('write a number'))
         placeToPrintNumber.innerHTML += numUser + ' '
         numberUser.push(numUser)
-        console.log(numberUser.length);
-        if (numberUser.length == 5) {
-            console.log('ferma');
-            clearInterval(sec)
-        }
     }
     return numberUser
 }
