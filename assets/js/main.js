@@ -20,15 +20,23 @@ let numberUser;
 
 generaNumber()
 console.log(number);
-setTimeout(clearPage, 4000)
 
-setTimeout(asknumberUser, 5000)
+setTimeout(clearPage, 4000)
+sec = setInterval(countDown, 1000);
+seconds = 30
+
+setTimeout(function() {
+    numberUser = []
+    for (let index = 0; index < 5; index++) {
+        numUser = parseInt(prompt('write a number'))
+        placeToPrintNumber.innerHTML += numUser + ' '
+        numberUser.push(numUser)
+    }
+}, 300000)
 
 
 function generaNumber() {
     //faccio partire il cronometro
-    sec = setInterval(countDown, 1000);
-    seconds = 30
     number = []
     for (let index = 0; index < 5; index++) {
         num = Math.floor(Math.random() * 100)
@@ -43,13 +51,7 @@ function clearPage() {
 }
 
 function asknumberUser() {
-    numberUser = []
-    for (let index = 0; index < 5; index++) {
-        numUser = parseInt(prompt('write a number'))
-        placeToPrintNumber.innerHTML += numUser + ' '
-        numberUser.push(numUser)
-    }
-    return numberUser
+
 }
 
 
